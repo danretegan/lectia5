@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectia 5</title>
+     <!-- Mai întâi normalizarea -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+/>
+  <!-- Apoi stilurile -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<!-- Modelul cutiei -->
+ <h1>Modelul cutiei</h1>
+
+<p class="text">This is the content of an element, such as text, image, video, or nested elements. By default, the height of the content area is determined by the content, and the width is determined by the element type.</p>
+
+<!-- Proprietățile width și height -->
+<h2>Proprietățile width și height</h2>
+<div class="box"></div>
+
+<!-- Proprietatea box-sizing -->
+<h2>Proprietatea box-sizing</h2>
+<h3>Valoarea content-box</h3>
+<p>Lățimea finală a blocului =150px +30px +30px +5px +5px =220px</p>
+
+<h3>Valoarea border-box</h3>
+<p>Lățimea finală a blocului =150px -30px -30px -5px -5px =80px</p>
+
+<h3>Valoarea globală border-box</h3>
+<p>Modelul standard al cutiei în proiectele moderne este border-box. Pentru a nu seta proprietatea box-sizing pentru fiecare element în parte chiar la începutul fișierului de stil, se folosește următorul cod CSS. Folosind selectorul universal *, valoarea border-box este setată pentru toate elementele și pseudo-elementele din document (mai multe despre asta mai târziu).</p>
+
+<!-- Normalizarea stilurilor -->
+<h2>Normalizarea stilurilor</h2>
+<p>Normalizarea stilului este o încercare de a rezolva această problemă prin includerea unui alt fișier de stil care remediază eventualele discrepanțe între foile de stil ale browserului. Adică este o tehnică de îmbunătățire a compatibilității cross-browser a unei pagini web - aceeași afișare și funcționare a site-ului în browsere diferite.
+
+    Tot ce trebuie să faceți este să includeți încă un fișier de stil înaintea tuturor stilurilor. <br>UTIL:
+    În normalizarea stilurilor modern-normalize valoarea globală border-box este setată în mod implicit, de aceea în stiluri puteți să nu îl indicați.</p>
+
+<!-- Geometria unui element -->
+<h2>Geometria unui element</h2>
+<p>Geometria unui element cuprinde 4 laturi: sus (top), dreapta (right), jos (bottom) și stânga (left). În această ordine, în sensul acelor de ceasornic de sus, sunt setate valorile proprietăților compuse padding, margin și border.</p>
+
+<!-- Proprietatea padding -->
+<h3>Proprietatea padding</h3>
+<p class="text">Lorem ipsum dolor sit, amet consectetur elit omnis adipisicing. Omnis voluptatibus sit reprehenderit iure est eveniet saepe fugit debitis laborum odio voluptatem repellat eaque voluptatum quos neque optio, perspiciatis aperiam error odit praesentium consequatur totam maiores. Minus similique molestias, eveniet delectus eaque dignissimos! Id deserunt magni doloremque, corrupti consectetur vero!</p>
+
+<!-- Proprietatea margin -->
+<h3>Proprietatea margin</h3>
+<article class="post">
+    <div class="post-thumb">
+      <img class="post-image" 
+      src="https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_1280.jpg" 
+      alt="Tabby cat in a funny sitting position">
+    </div>
+    <h1 class="post-heading">All about cats</h1>
+    <p class="post-text">Lorem ipsum dolor sit, amet consectetur elit omnis adipisicing. Omnis voluptatibus sit reprehenderit iure est eveniet saepe fugit debitis laborum odio voluptatem repellat eaque voluptatum quos neque optio, perspiciatis aperiam error odit praesentium consequatur totam maiores. Minus similique molestias, eveniet delectus eaque dignissimos! Id deserunt magni doloremque, corrupti consectetur vero veniam!</p>
+  </article>
+
+  <p>Proprietatea padding separă conținutul de marginea elementului, în timp ce margin creează goluri între elementele adiacente. În asta și constă diferența.</p>
+
+<!-- Prăbușirea marginilor verticale -->
+<h3>Prăbușirea marginilor verticale</h3>
+<div class="box top"></div>
+<div class="box bottom"></div>
+
+<!-- Ieșirea marginilor verticale înafara părintelui -->
+<h3>Ieșirea marginilor verticale înafara părintelui</h3>
+<div class="outer-box">
+    <div class="inner-box"></div>
+  </div>
+<p>ATENȚIE:
+    Dacă marginile de sus și de jos de la joncțiunea cu blocul părinte par să-l străpungă și să cadă, aceasta este una dintre cele mai frecvente erori de machetare. Setați margini numai între două elemente adiacente.</p>
+
+<!-- Proprietatea border -->
+<h3>Proprietatea border</h3>
+<h4>Borduri individuale</h4>
+<h4>Bordura rotunjită</h4>
+<div class="box-1"></div>
+<div class="box-2"></div>
+<div class="box-3"></div>
+
+<!-- Tipuri de elemente -->
+<h2>Tipuri de elemente</h2>
+<p>Proprietatea display. <br> 
+   Elementele de tip bloc, inline si inline-block.</p>
+
+<h3>Elementele de tip bloc (block-level)</h3>
+<div class="box indigo"></div>
+<div class="box green"></div>
+<div class="box amber"></div>
+
+<h3>Centrarea orizontală a elementelor de tip bloc</h3>
+  
+  <div class="parent">
+   <p>Parent element</p>
+    <div class="child">
+        Fixed width block-level child element
+    </div>
+  </div>
+
+  <!-- Elementul de tip container -->
+  <h3>Elementul de tip container</h3>
+  <div class="container">
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis quod quo tenetur quia expedita laboriosam at doloribus molestiae illum, modi minus qui sunt odio iste commodi nisi dicta distinctio esse. Quae beatae nam ullam earum velit illum voluptate nesciunt consectetur! Quam fuga labore dicta iusto tenetur nesciunt velit iure soluta!</p>
+  
+    <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim eum quas quia nam fugit quibusdam esse amet et! Nam et quo nisi commodi dolor, deserunt vero deleniti vel ducimus praesentium aliquid odio fugit accusantium debitis facere eos asperiores eaque quas? Rerum deserunt ipsa veritatis vel totam voluptate repellendus minus sit?</p>
+  
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dicta deserunt hic eos aliquam saepe quo facere, corporis assumenda, ratione debitis suscipit. Dignissimos exercitationem error amet, facilis a velit excepturi neque ut nostrum odio ad, vitae ab quo. Velit aspernatur facere, magni cum fuga harum facilis numquam. Neque, quae et.</p>
+  </div>
+
+<p>În majoritatea cazurilor, există mai multe containere, deoarece fiecare secțiune a paginii are nevoie de propriul container. Cu o astfel de abordare, puteți seta convenabil diferite fundaluri de dimensiune completă și alte stiluri de design pentru secțiuni individuale ale paginii.</p>
+
+  <header class="page-header">
+    <div class="container">
+      <p>Page header</p>
+    </div>
+  </header>
+  
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Hero section with CTA button etc.</h1>
+      </div>
+    </section>
+  
+    <section class="about">
+      <div class="container">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dignissimos debitis ipsum minus recusandae saepe voluptatem sunt neque eaque ad, facilis consequatur porro excepturi, nulla corrupti consequuntur voluptates? Consectetur expedita eaque voluptate inventore possimus sit. Nesciunt commodi ut vitae at similique vero harum amet eos? Sit adipisci deserunt nam libero?</p>
+      </div>
+    </section>
+  
+    <section class="features">
+      <div class="container">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dignissimos debitis ipsum minus recusandae saepe voluptatem sunt neque eaque ad, facilis consequatur porro excepturi, nulla corrupti consequuntur voluptates? Consectetur expedita eaque voluptate inventore possimus sit. Nesciunt commodi ut vitae at similique vero harum amet eos? Sit adipisci deserunt nam libero?</p>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="page-footer">
+    <div class="container">
+      <p>Page footer</p>
+    </div>
+  </footer>
+
+  <!-- Elementele de tip inline -->
+  <h2>Elementele de tip inline</h2>
+  <a class="link" href="">Link</a>
+  <a class="link" href="">Link</a>
+  <a class="link" href="">Link</a>
+  <a class="link" href="">Link</a>
+
+<!-- Goluri pentru elementele de tip inline -->
+<h3>Goluri pentru elementele de tip inline</h3>
+<div class="card">
+  <img class="card-image" src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=240&w=320" alt="A cat">
+  <h2 class="card-heading">Card title 1</h2>
+</div>
+
+<div class="card">
+  <img class="card-image no-gap" src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=240&w=320" alt="A cat">
+  <h2 class="card-heading">Card title 2</h2>
+</div>
+
+
+
+
+
+</body>
+</html>
